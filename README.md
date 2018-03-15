@@ -39,7 +39,7 @@ If you'd like to push to your own Docker Hub Repo:
 - `./debug.sh` to drop into a shell in a running instance of the container
 - `./run.sh REPO_NAME` to run the tool from your local build
 
-# ToDo
+# ToDo
 
 ## Fix OS Spam
 
