@@ -2,8 +2,6 @@
 
 Docker image (or command, your choice) to query Docker Hub/Registry for information that should _really_ be provided via the Docker CLI :(
 
-Created this repo after realising that no-one sees things on Dockerhub.
-
 # Usage
 
 Example:
