@@ -23,7 +23,7 @@ v1.8.9          amd64         linux
 
 Ideally there would be the _option_ of filtering and of displaying more columns, but I wrote this to be a quick reference when setting up projects with [dockerprep](https://github.com/ElectricWarr/dockerprep)
 
-# ToDo
+# ToDo
 
 ## Fix OS Spam
 
