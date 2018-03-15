@@ -4,6 +4,8 @@ Docker image (or command, your choice) to query Docker Hub/Registry for informat
 
 Created this repo after realising that no-one sees things on Dockerhub.
 
+# Usage
+
 Example:
 
 ```
@@ -22,6 +24,20 @@ v1.8.9          amd64         linux
 ```
 
 Ideally there would be the _option_ of filtering and of displaying more columns, but I wrote this to be a quick reference when setting up projects with [dockerprep](https://github.com/ElectricWarr/dockerprep)
+
+# Setup
+
+1. Copy `project.cfg.template` to `project.cfg` (don't worry, it's in your `.gitignore`)
+
+If you'd like to push to your own Docker Hub Repo:
+
+2. Edit `project.cfg` to include your dockerhub ID/namespace
+
+# Development
+
+- `./build.sh` to build the image
+- `./debug.sh` to drop into a shell in a running instance of the container
+- `./run.sh REPO_NAME` to run the tool from your local build
 
 # ToDo
 
