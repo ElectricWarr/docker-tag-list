@@ -1,8 +1,0 @@
-repo="tag-list"
-tag="1.2.1"
-name="tag-list"
-dockerhub_namespace='CHANGE_ME'
-
-# NB: 
-#  - Command substitution can be used in variables here - try to use "$(this format)" instead of `backticks` if possible
-#  - Mount/Volume paths used here MUST be absolute - use eg. "$(realpath SYMLINK_PATH)" if you don't want to hardcode them
