@@ -6,6 +6,6 @@ RUN apk --no-cache add \
       jq \
       util-linux
 
-COPY tag-list.sh tag-list
+COPY tag-list.sh /bin/tag-list
 
-ENTRYPOINT ["/bin/bash","./tag-list"]
+ENTRYPOINT ["tag-list"]
