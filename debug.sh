@@ -8,7 +8,7 @@ docker run -it \
   --name="$debug_name" \
   --entrypoint='' \
   "$repo":latest \
-  sh
+  bash
 
 # Some "docker run" options for quick reference:
 #  --env VARIABLE=value
