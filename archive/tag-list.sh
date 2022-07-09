@@ -27,5 +27,7 @@ fi
 if [[ "$2" == '--debug' ]]; then
   echo "$tags"
 else
-  echo "$tags" | jq --raw-output '["TAG","ARCHITECTURE","OS"], (."results"[] | [."name", ."images"[]."architecture", ."images"[]."os"]) | @tsv' | column -t
+  # echo "$tags" | jq --raw-output '["TAG","ARCHITECTURE","OS"], (."results"[] | [."name", ."images"[]."architecture", ."images"[]."os"]) | @tsv' | column -t
+  # Fixed JQ query:
+  echo "$tags" | jq --raw-output '["TAG","ARCHITECTURE","OS"], (.results[] | [.name, ([.images[].os] | sort | unique | join(", ")), ([.images[].architecture] | sort | unique | join(", "))]) | @tsv' | column -t -s $'\t'
 fi

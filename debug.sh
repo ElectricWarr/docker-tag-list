@@ -7,8 +7,9 @@ docker rm "$debug_name" > /dev/null 2>&1
 docker run -it \
   --name="$debug_name" \
   --entrypoint='' \
+  --mount type=bind,source="$PWD/golang",destination='/go/src/tag-list' \
   "$repo":latest \
-  bash
+  sh
 
 # Some "docker run" options for quick reference:
 #  --env VARIABLE=value
