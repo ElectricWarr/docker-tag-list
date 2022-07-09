@@ -11,9 +11,10 @@ COPY golang/ ./
 RUN --mount=type=cache,target=/root/.cache/go-build \
     CGO_ENABLED=0 go build -o /go/bin/tag-list
 
-# FROM scratch AS run
-FROM golang:1.18-alpine3.16 AS run
+FROM scratch AS run
 WORKDIR /
 COPY --from=build /go/bin/tag-list /bin/tag-list
+# Cheat and steal trusted certs from build image <3
+COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 ENTRYPOINT ["tag-list"]
 CMD ["--help"]
